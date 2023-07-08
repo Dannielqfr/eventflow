@@ -106,7 +106,7 @@ const Index = () => {
           <p className='text-center'>Entradas disponibles: {popupBuyTicket.event.capacity && popupBuyTicket.event.selled ? (popupBuyTicket.event.capacity - popupBuyTicket.event.selled) >= 11 ? "Más de 10 entradas" : popupBuyTicket.event.capacity - popupBuyTicket.event.selled : "Disponible"}</p>
           <div className='text-center flex gap-3'>Precios:
             {popupBuyTicket.event.prices?.map(p => {
-              return <div onClick={() => handleChoose(p)} className='cursor-pointer bg-purple-500 w-fit px-3 py-2 rounded text-white'><p className='pl-2' key={p.idprice}>{`${p.price}.00`}</p></div>
+              return (<div onClick={() => handleChoose(p)} className='cursor-pointer bg-purple-500 w-fit px-3 py-2 rounded text-white' key={p.idprice}><p className='pl-2' >{`${p.price}.00`}</p></div>)
             })}
           </div>
           {popupBuyTicket.detail &&
