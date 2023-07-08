@@ -117,10 +117,10 @@ const Index = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    if (popupEvent.event.idevent === 1) {
-      // editar
+    if (popupEvent.event.idevent !== 0) {
+      dispatch(actionAllevents.update(popupEvent.event))
     } else {
-      const cleaned = {
+      const ev = {
         idevent: allevents.length + 1,
         idorganizer: user?.iduser,
         eventday: popupEvent.event.eventday,
@@ -135,11 +135,9 @@ const Index = () => {
         img: "img2.png",
         state: 7
       }
-      //crear
+      dispatch(actionAllevents.create(ev))
     }
-
-    // dispatch(actionUsers.update(popupUser.user))
-    // setPopupUser({ show: false, user: cleaneduser })
+    setPopupEvent({ show: false, event: cleaned })
   }
 
   return (

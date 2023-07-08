@@ -5,7 +5,7 @@ const Index = () => {
   return (
     <>
       <Layout>
-        a
+        En proceso
       </Layout>
     </>
   )

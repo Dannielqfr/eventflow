@@ -38,9 +38,20 @@ const alleventSlice = createSlice({
             })
             state.allevents = events
         },
+        create(state: State, action: PayloadAction<AllEvent>) {
+            console.log("creando ando")
+            state.allevents.push(action.payload)
+        },
         update(state: State, action: PayloadAction<AllEvent>) {
-            console.log("en update")
+            const events = state.allevents.map(e => {
+                if (e.idevent === action.payload.idevent) {
+                    return action.payload
+                }
+                return e
+            })
+            state.allevents = events
         }
+
     },
 })
 

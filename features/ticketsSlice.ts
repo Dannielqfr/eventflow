@@ -20,8 +20,8 @@ const ticketSlice = createSlice({
     name: "ticket",
     initialState,
     reducers: {
-        add(state: State, action: PayloadAction<Ticket>) {
-            console.log(state)
+        create(state: State, action: PayloadAction<Ticket>) {
+            state.tickets.push(action.payload)
         },
         update(state: State, action: PayloadAction<Ticket>) {
             console.log("en update")

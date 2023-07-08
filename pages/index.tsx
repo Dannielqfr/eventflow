@@ -26,8 +26,8 @@ export default function Home() {
             <Link href="/login"><User /></Link>
           </div>
         </section>
-        <section>
-          <div className='md:flex md:mt-5 md:mb-5'>
+        <section className='flex flex-col justify-center items-center'>
+          <div className='md:flex md:mt-5 md:mb-5 md:ml-32'>
             <div className='p-10'>
               <h1 className='text-3xl font-extrabold'>EL FUTURO DE LA GESTIÓN DE EVENTOS</h1>
               <p className='mt-3'>La plataforma online lider en la gestión de venta de entradas para eventos de cualquier tipo.</p>
