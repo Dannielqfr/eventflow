@@ -2,6 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
+import User from '@/components/icons/User'
+import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,109 +16,54 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>pages/index.tsx</code>
-          </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
+      <main className="bg-stone-900 w-screen text-white min-h-screen">
+        <section className='bg-stone-800 flex flex-row justify-between px-16 h-14 items-center'>
+          <div className='font-bold text-2xl'>EventFlow</div>
+          <div className='flex gap-6 font-semibold items-center'>
+            <div className='hidden md:inline-block'>Nuestros Socios</div>
+            <div className='hidden md:inline-block'>Nosotros</div>
+            <div className='hidden md:inline-block'>Contáctanos</div>
+            <Link href="/login"><User /></Link>
           </div>
-        </div>
-
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-          <div className={styles.thirteen}>
-            <Image
-              src="/thirteen.svg"
-              alt="13"
-              width={40}
-              height={31}
-              priority
-            />
+        </section>
+        <section>
+          <div className='md:flex md:mt-5 md:mb-5'>
+            <div className='p-10'>
+              <h1 className='text-3xl font-extrabold'>EL FUTURO DE LA GESTIÓN DE EVENTOS</h1>
+              <p className='mt-3'>La plataforma online lider en la gestión de venta de entradas para eventos de cualquier tipo.</p>
+              <div className='mt-5 flex justify-around'>
+                <Link className='bg-purple-500 px-3 py-1 rounded-sm' href="/login">Comenzar</Link>
+                <div className='border-2 border-purple-500 px-3 py-1 rounded-sm text-purple-500'>Contáctanos</div>
+              </div>
+            </div>
+            <div className='flex items-center'>
+              <Image alt='Icono' src="/Ticket.svg" width={450} height={450} className='w-9/12 ml-5' />
+              <div className='flex flex-col gap-5'>
+                <Image alt='Icono' src="/svgyoutube.svg" width={30} height={30} className='bg-white rounded-full p-1' />
+                <Image alt='Icono' src="/svgfacebook.svg" width={30} height={30} className='bg-white rounded-full p-1' />
+                <Image alt='Icono' src="/svginstagram.svg" width={30} height={30} className='bg-white rounded-full p-1' />
+              </div>
+            </div>
           </div>
-        </div>
-
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
-        </div>
+          <div className='p-7 flex flex-wrap justify-center gap-3'>
+            <div className='border-t-2 w-72 mb-7'>
+              <h3 className='text-xl font-semibold mb-1'>Portable</h3>
+              <span className='font-light'>Conecta con tu audiencia en cualquier sitio con nuestra app movil</span>
+            </div>
+            <div className='border-t-2 w-72 mb-7'>
+              <h3 className='text-xl font-semibold mb-1'>Diferente</h3>
+              <span className='font-light'>Funciones incleibles que te conectarán con tu audiencia</span>
+            </div>
+            <div className='border-t-2 w-72 mb-7'>
+              <h3 className='text-xl font-semibold mb-1'>100 %</h3>
+              <span className='font-light'>Libre de exclusividad, toma el control total de tus eventos.</span>
+            </div>
+            <div className='border-t-2 w-72 mb-7'>
+              <h3 className='text-xl font-semibold mb-1'>Y mucho más</h3>
+              <span className='font-light'>Registrate ahora y potencia tus eventos con EventFLow</span>
+            </div>
+          </div>
+        </section>
       </main>
     </>
   )
